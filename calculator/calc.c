@@ -6,6 +6,7 @@ int main()
     int input;
     int calchoice, a, b, sum;
     int testchoice, c, summ;
+    int primeinput, d, e, summa;
     printf("계산기: 1, 짝홀 검사기: 2, 소수판별기: 3을 입력하세요.");
     scanf("%d", &input);
 
@@ -59,5 +60,11 @@ int main()
         if(c==1){ //홀수
         printf("입력한 수는 홀수입니다.");
         }
+    }
+    if(input==3){
+        printf("판별할 수를 입력하세요");
+        scanf("%d",&primeinput);
+        d=pow(primeinput,0.5);
+        
     }
 }
