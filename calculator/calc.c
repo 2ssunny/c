@@ -3,11 +3,11 @@
 
 int main()
 {
-    int input;
-    int calchoice, a, b, sum;
-    int testchoice, c, summ;
-    int primeinput, e, f, div, divsum, summa;
-    float d;
+    int input; //common
+    int calchoice, a, b, sum; //계산
+    int testchoice, c, summ; //짝홀
+    int primeinput, e, f, div, divsum, summa; //소수판별
+    float d; //소수판별
     printf("계산기: 1, 짝홀 검사기: 2, 소수판별기: 3을 입력하세요.\n");
     scanf("%d", &input);
 
@@ -71,6 +71,7 @@ int main()
         {
             divsum=primeinput%f;
         }
+        
         if(divsum==0){
             printf("입력한 수는 소수가 아닙니다.");
         }
@@ -79,4 +80,5 @@ int main()
         }
         
     }
+    
 }
