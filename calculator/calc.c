@@ -1,15 +1,16 @@
 #include <stdio.h>
+#include <math.h>
 
 int main()
 {
     int input;
     int calchoice, a, b, sum;
     int testchoice, c, summ;
-    printf("계산기를 사용하려면 1, 짝홀 검사기를 사용하려면 2를 입력하세요.");
+    printf("계산기: 1, 짝홀 검사기: 2, 소수판별기: 3을 입력하세요.");
     scanf("%d", &input);
 
     if(input==1){ //계산기
-        printf("덧셈은 1, 뺄셈은 2, 곱셈은 3, 나눗셈은 4를 입력하세요");
+        printf("덧셈은 1, 뺄셈은 2, 곱셈은 3, 나눗셈은 4를 입력하세요.");
         scanf("%d", &calchoice);
 
         if(calchoice==1){ //덧셈
@@ -59,5 +60,4 @@ int main()
         printf("입력한 수는 홀수입니다.");
         }
     }
-    return 0;
 }
