@@ -8,7 +8,7 @@ int main()
     int testchoice, c, summ; //짝홀
     int primeinput, e, f, divsum; //소수판별
     float d; //소수판별
-    
+
     printf("선택\n1:계산기\n2:짝홀 판별기\n3:소수판별\n:");
     scanf("%d", &input);
 
@@ -52,7 +52,7 @@ int main()
             printf("결과는 %d",sum);
         }
     }
-    if(input==2){ //짝홀 기
+    if(input==2){ //짝홀 판별기
         printf("검사할 수를 입력하세요\n");
         scanf("%d", &testchoice);
         c=testchoice%2;
