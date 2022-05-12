@@ -6,12 +6,13 @@ int main()
     int input;
     int calchoice, a, b, sum;
     int testchoice, c, summ;
-    int primeinput, d, e, summa;
-    printf("계산기: 1, 짝홀 검사기: 2, 소수판별기: 3을 입력하세요.");
+    int primeinput, e, f, div, divsum, summa;
+    float d;
+    printf("계산기: 1, 짝홀 검사기: 2, 소수판별기: 3을 입력하세요.\n");
     scanf("%d", &input);
 
     if(input==1){ //계산기
-        printf("덧셈은 1, 뺄셈은 2, 곱셈은 3, 나눗셈은 4를 입력하세요.");
+        printf("덧셈은 1, 뺄셈은 2, 곱셈은 3, 나눗셈은 4를 입력하세요.\n");
         scanf("%d", &calchoice);
 
         if(calchoice==1){ //덧셈
@@ -51,7 +52,7 @@ int main()
         }
     }
     if(input==2){ //짝홀 검사기
-        printf("검사할 수를 입력하세요");
+        printf("검사할 수를 입력하세요\n");
         scanf("%d", &testchoice);
         c=testchoice%2;
         if(c==0){ //짝수
@@ -61,10 +62,21 @@ int main()
         printf("입력한 수는 홀수입니다.");
         }
     }
-    if(input==3){
-        printf("판별할 수를 입력하세요");
+    if(input==3){ //소수 판별기
+        printf("판별할 수를 입력하세요\n");
         scanf("%d",&primeinput);
-        d=pow(primeinput,0.5);
+        d=sqrt(primeinput);
+        int f=(int)d;
+        for (int i=1; i<=primeinput; i++)
+        {
+            divsum=primeinput%f;
+        }
+        if(divsum==0){
+            printf("입력한 수는 소수가 아닙니다.");
+        }
+        if(divsum!=0){
+            printf("입력한 수는 소수입니다.");
+        }
         
     }
 }
