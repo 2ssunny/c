@@ -67,15 +67,15 @@ int main()
         scanf("%d",&primeinput);
         d=sqrt(primeinput);
         int f=(int)d;
-        for (int i=1; i<=primeinput; i++)
+        for (int i=1; i<=primeinput; i++) //소수 판별
         {
             divsum=primeinput%f;
         }
         
-        if(divsum==0){
+        if(divsum==0){ //소수 아님
             printf("입력한 수는 소수가 아닙니다.");
         }
-        if(divsum!=0){
+        if(divsum!=0){ //소수
             printf("입력한 수는 소수입니다.");
         }
         
