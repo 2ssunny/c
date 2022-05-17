@@ -14,8 +14,8 @@ int main()
     printf("선택\n1:계산기\n2:짝홀 판별기\n3:소수판별\n4:범위내 소수\n:");
     scanf("%d", &input);
 
-    if (input == 1)
-    { //계산기
+    if (input == 1) //사칙연산
+    {
         printf("덧셈은 1, 뺄셈은 2, 곱셈은 3, 나눗셈은 4를 입력하세요.\n");
         scanf("%d", &calchoice);
 
@@ -59,8 +59,8 @@ int main()
             printf("결과는 %d", sum);
         }
     }
-    if (input == 2)
-    { //짝홀 판별기
+    if (input == 2) //짝홀 판별기
+    {
         printf("검사할 수를 입력하세요\n");
         scanf("%d", &testchoice);
         c = testchoice % 2;
@@ -73,8 +73,8 @@ int main()
             printf("입력한 수는 홀수입니다.");
         }
     }
-    if (input == 3)
-    { //소수 판별기
+    if (input == 3) //소수 판별기
+    {
         printf("판별할 수를 입력하세요\n");
         scanf("%d", &primeinput);
         d = sqrt(primeinput);
@@ -93,7 +93,7 @@ int main()
             printf("입력한 수는 소수입니다.");
         }
     }
-    if (input == 4) //범위내 소수_미완
+    if (input == 4) //범위내 소수
     {
         printf("범위를 시작할 수를 입력하세요");
         scanf("%d", &ranf);
