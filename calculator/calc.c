@@ -91,7 +91,7 @@ int main()
             printf("입력한 수는 소수입니다.");
         }
     }
-    if (input == 4)
+    if (input == 4) //범위내 소수_미완
     {
         printf("범위를 시작할 수를 입력하세요");
         scanf("%d", &ranf);
