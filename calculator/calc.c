@@ -7,8 +7,9 @@ int main()
     int testchoice, c, summ;      //짝홀
     int primeinput, e, f, divsum; //소수판별
     float d;                      //소수판별
+    int ranf, rant, g, h, j, k;   //소수 범위
 
-    printf("선택\n1:계산기\n2:짝홀 판별기\n3:소수판별\n:");
+    printf("선택\n1:계산기\n2:짝홀 판별기\n3:소수판별\n4:범위내 소수\n:");
     scanf("%d", &input);
 
     if (input == 1)
@@ -89,5 +90,18 @@ int main()
         { //소수
             printf("입력한 수는 소수입니다.");
         }
+    }
+    if (input == 4)
+    {
+        printf("범위를 시작할 수를 입력하세요");
+        scanf("%d", &ranf);
+        printf("범위를 끝낼 수를 입력하세요");
+        scanf("%d", &rant);
+        for (int i = ranf; i <= rant; i++)
+        {
+            g = ranf % i;
+        }
+        if (g == 0)
+            ;
     }
 }
