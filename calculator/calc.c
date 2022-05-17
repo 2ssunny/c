@@ -1,4 +1,5 @@
-#include <stdio.h><math.h>
+#include <stdio.h>
+#include <math.h>
 
 int main()
 {
@@ -7,7 +8,8 @@ int main()
     int testchoice, c, summ;      //짝홀
     int primeinput, e, f, divsum; //소수판별
     float d;                      //소수판별
-    int ranf, rant, g, h, j, k;   //소수 범위
+    int ranf, rant, h, k, l, m, n, o, p;
+    float j; //소수 범위
 
     printf("선택\n1:계산기\n2:짝홀 판별기\n3:소수판별\n4:범위내 소수\n:");
     scanf("%d", &input);
@@ -97,11 +99,33 @@ int main()
         scanf("%d", &ranf);
         printf("범위를 끝낼 수를 입력하세요");
         scanf("%d", &rant);
+        printf("2\n3\n5\n7\n");
         for (int i = ranf; i <= rant; i++)
         {
-            g = ranf % i;
+            i != 2, 3, 5, 7;
+            j = sqrt(i);
+            int g = (int)j;
+            h = i % g;
+            if (h != 0)
+            {
+                k = i % 2;
+                if (k != 0)
+                {
+                    l = i % 3;
+                    if (l != 0)
+                    {
+                        m = i % 5;
+                        if (m != 0)
+                        {
+                            n = i % 7;
+                            if (n != 0)
+                            {
+                                printf("%d\n", i);
+                            }
+                        }
+                    }
+                }
+            }
         }
-        if (g == 0)
-            ;
     }
 }
