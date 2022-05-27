@@ -3,11 +3,10 @@
 
 int main()
 {
-    int input;                    // common
-    int calchoice, a, b, sum;     //계산
-    int testchoice, c, summ;      //짝홀
-    int primeinput, e, f, divsum; //소수판별
-    float d;                      //소수판별
+    int input; // common
+    int choice, a, b, sum;
+    int primeinput; //소수판별
+    float d;        //소수판별
     int ranf, rant, h, k, l, m, n, o, p;
     float j; //소수 범위
 
@@ -17,9 +16,9 @@ int main()
     if (input == 1) //사칙연산
     {
         printf("덧셈은 1, 뺄셈은 2, 곱셈은 3, 나눗셈은 4를 입력하세요.\n");
-        scanf("%d", &calchoice);
+        scanf("%d", &choice);
 
-        if (calchoice == 1)
+        if (choice == 1)
         { //덧셈
             printf("첫번째 수 입력");
             scanf("%d", &a);
@@ -29,7 +28,7 @@ int main()
             printf("결과는 %d", sum);
         }
 
-        if (calchoice == 2)
+        if (choice == 2)
         { //뺄셈
             printf("첫번째 수 입력");
             scanf("%d", &a);
@@ -39,7 +38,7 @@ int main()
             printf("결과는 %d", sum);
         }
 
-        if (calchoice == 3)
+        if (choice == 3)
         { //곱셈
             printf("첫번째 수 입력");
             scanf("%d", &a);
@@ -49,7 +48,7 @@ int main()
             printf("결과는 %d", sum);
         }
 
-        if (calchoice == 4)
+        if (choice == 4)
         { //나눗셈
             printf("첫번째 수 입력");
             scanf("%d", &a);
@@ -62,13 +61,13 @@ int main()
     if (input == 2) //짝홀 판별기
     {
         printf("검사할 수를 입력하세요\n");
-        scanf("%d", &testchoice);
-        c = testchoice % 2;
-        if (c == 0)
+        scanf("%d", &choice);
+        a = choice % 2;
+        if (a == 0)
         { //짝수
             printf("입력한 수는 짝수입니다.");
         }
-        if (c == 1)
+        if (a == 1)
         { //홀수
             printf("입력한 수는 홀수입니다.");
         }
@@ -78,17 +77,17 @@ int main()
         printf("판별할 수를 입력하세요\n");
         scanf("%d", &primeinput);
         d = sqrt(primeinput);
-        int f = (int)d;
+        a = (int)d;
         for (int i = 1; i <= primeinput; i++) //소수 판별
         {
-            divsum = primeinput % f;
+            sum = primeinput % a;
         }
 
-        if (divsum == 0)
+        if (sum != 0)
         { //소수 아님
             printf("입력한 수는 소수가 아닙니다.");
         }
-        if (divsum != 0)
+        if (sum == 0)
         { //소수
             printf("입력한 수는 소수입니다.");
         }
