@@ -7,7 +7,7 @@ int main()
     int choice, a, b, sum;
     int primeinput; //소수판별
     float d;        //소수판별
-    int ranf, rant, h, k, l, m, n, o, p;
+    int ranf, rant, e, f;
     float j; //소수 범위
 
     printf("선택\n1:계산기\n2:짝홀 판별기\n3:소수판별\n4:범위내 소수\n:");
@@ -15,7 +15,7 @@ int main()
 
     if (input == 1) //사칙연산
     {
-        printf("덧셈은 1, 뺄셈은 2, 곱셈은 3, 나눗셈은 4를 입력하세요.\n");
+        printf("\n\n덧셈은 1, 뺄셈은 2, 곱셈은 3, 나눗셈은 4를 입력하세요.\n");
         scanf("%d", &choice);
 
         if (choice == 1)
@@ -60,7 +60,7 @@ int main()
     }
     if (input == 2) //짝홀 판별기
     {
-        printf("검사할 수를 입력하세요\n");
+        printf("\n\n검사할 수를 입력하세요\n");
         scanf("%d", &choice);
         a = choice % 2;
         if (a == 0)
@@ -74,7 +74,7 @@ int main()
     }
     if (input == 3) //소수 판별기
     {
-        printf("판별할 수를 입력하세요\n");
+        printf("\n\n판별할 수를 입력하세요\n");
         scanf("%d", &primeinput);
         d = sqrt(primeinput);
         a = (int)d;
@@ -92,39 +92,27 @@ int main()
             printf("입력한 수는 소수입니다.");
         }
     }
-    if (input == 4) //범위내 소수_수정 필요
+    if (input == 4) //범위내 소수
     {
-        printf("범위를 시작할 수를 입력하세요");
+        printf("\n범위를 시작 할 수 입력\n:");
         scanf("%d", &ranf);
-        printf("범위를 끝낼 수를 입력하세요");
+        printf("\n범위를 끝낼 수 입력\n:");
         scanf("%d", &rant);
-        printf("2\n3\n5\n7\n");
-        for (int i = ranf; i <= rant; i++)
+        printf("\n");
+        for (e = ranf; e <= rant; e++)
         {
-            i != 2, 3, 5, 7;
-            j = sqrt(i);
-            int g = (int)j;
-            h = i % g;
-            if (h != 0)
+            for (f = 2; f < e; f++) // n이 소수면 i가 n이 되면 반복문이 끝남
             {
-                k = i % 2;
-                if (k != 0)
+                if (e % f == 0) // i는 n의 약수
                 {
-                    l = i % 3;
-                    if (l != 0)
-                    {
-                        m = i % 5;
-                        if (m != 0)
-                        {
-                            n = i % 7;
-                            if (n != 0)
-                            {
-                                printf("%d\n", i);
-                            }
-                        }
-                    }
+                    break; // i가 n보다 작은 상태로 반복문 탈출
                 }
             }
+            if (f == e) //소수임
+            {
+                printf("%d  ", f);
+            }
         }
+        printf("\n");
     }
 }
