@@ -4,11 +4,8 @@
 int main()
 {
     int input; // common
-    int choice, a, b, sum;
-    int primeinput; //소수판별
-    float d;        //소수판별
-    int ranf, rant, e, f;
-    float j; //소수 범위
+    int choice, a, b, sum, printinput, ranf, rant, e, f;
+    float d;
 
     printf("선택\n1:계산기\n2:짝홀 판별기\n3:소수판별\n4:범위내 소수\n:");
     scanf("%d", &input);
