@@ -4,7 +4,7 @@
 int main()
 {
     int input; // common
-    int choice, a, b, sum, printinput, ranf, rant, e, f;
+    int choice, a, b, sum, primeinput, ranf, rant, e, f;
     float d;
 
     printf("선택\n1:계산기\n2:짝홀 판별기\n3:소수판별\n4:범위내 소수\n:");
