@@ -4,7 +4,7 @@
 int main()
 {
     int input; // common
-    int choice, a, b, sum, primeinput, ranf, rant, e, f;
+    int choice, a, b, sum, primeinput, ranf, rant;
     float d;
 
     printf("선택\n1:계산기\n2:짝홀 판별기\n3:소수판별\n4:범위내 소수\n:");
@@ -95,21 +95,22 @@ int main()
         scanf("%d", &ranf);
         printf("\n범위를 끝낼 수 입력\n:");
         scanf("%d", &rant);
-        printf("\n");
-        for (e = ranf; e <= rant; e++)
+        printf("\n%d와 %d사이의 소수:\n ", ranf, rant);
+        for (a = ranf; a <= rant; a++)
         {
-            for (f = 2; f < e; f++) // n이 소수면 i가 n이 되면 반복문이 끝남
+            for (b = 2; b < a; b++) // a이 소수면 b가 a이 되면 반복문이 끝남
             {
-                if (e % f == 0) // i는 n의 약수
+                if (a % b == 0) // b는 a의 약수
                 {
-                    break; // i가 n보다 작은 상태로 반복문 탈출
+                    break; // b가 a보다 작은 상태로 반복문 탈출
                 }
             }
-            if (f == e) //소수임
+            if (b == a) //소수임
             {
-                printf("%d  ", f);
+                printf("%d  ", b);
             }
         }
         printf("\n");
     }
+    return 0;
 }
