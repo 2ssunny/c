@@ -3,7 +3,6 @@
 
 int input; //입력 받기
 
-
 int arithmeticop() //사칙연산
 {
     int choice, a, b, sum;
@@ -89,7 +88,7 @@ int prime() //소수판별
 }
 int pirmerange() //범위내 소수
 {
-    int ranf, rant, a,b;
+    int ranf, rant, a, b;
     printf("\n범위를 시작 할 수 입력\n:");
     scanf("%d", &ranf);
     printf("\n범위를 끝낼 수 입력\n:");
@@ -113,7 +112,8 @@ int pirmerange() //범위내 소수
 }
 int rootrange() //소수점 범위내 루트-edit needed
 {
-    int a, b, c;
+    int a, b;
+    double c;
     printf("제곱근을 알고 싶은 양수 입력\n:");
     scanf("%d", &a);
     c = sqrt(a);
