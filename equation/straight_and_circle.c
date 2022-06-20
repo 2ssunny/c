@@ -10,8 +10,8 @@ int back, Do;                   // summary and interacting
 
 int stline_gi() //기울기와 한 점
 {
-    int x,y;
-    int xl, yl; 
+    int x, y;
+    int xl, yl;
     printf("직선의 기울기 입력:\n");
     scanf("%Lf", &m);
     printf("직선이 지나는 한 점의 x좌표:\n");
@@ -45,19 +45,19 @@ int calcD()
 {
     double D; //판별식 D
     D = (2 * m * liney) * (2 * m * liney) - 4 * (m * m + 1) * ((liney * liney) - (cr * cr));
-    //D = b * b - (4 * a * c) =>판별식 D 계산
+    // D = b * b - (4 * a * c) =>판별식 D 계산
     printf("%Lf\n\n\n", D);
-    if (D == 0) //D=0 -> 교점이 1개
+    if (D == 0) // D=0 -> 교점이 1개
     {
         Do = 1;
         back = 30;
     }
-    if (D > 0) //D>0 -> 교점이 2개
+    if (D > 0) // D>0 -> 교점이 2개
     {
         Do = 2;
         back = 30;
     }
-    if (D < 0) //D<0 ->교점이 0개
+    if (D < 0) // D<0 ->교점이 0개
     {
         Do = 0;
         back = 30;
@@ -78,7 +78,6 @@ int summary()
         printf("y=%Lfx+%Lf와 (x-%Lf)²+(y-%Lf)²=%Lf 사이에는 교점이 %d개 입니다.\n", m, liney, cx, cy, crr, Do);
     }
 }
-
 int main()
 {
 
