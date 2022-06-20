@@ -10,7 +10,6 @@ int back, Do;                   // summary and interacting
 
 int stline_gi() //기울기와 한 점
 {
-    int x, y;
     int xl, yl;
     printf("직선의 기울기 입력:\n");
     scanf("%Lf", &m);
