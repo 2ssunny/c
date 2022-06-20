@@ -84,10 +84,7 @@ int main()
     stline_gi();
     circle();
     calcD();
-    if (back == 30)
-    {
-        summary();
-    }
+    summary();
     system("pause");
     return 0;
 }
