@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <math.h>
 
-int input; //입력 받기
-
 int arithmeticop() //사칙연산
 {
     int choice, a, b, sum;
@@ -56,12 +54,12 @@ int oddeven() //짝홀판별
     printf("\n\n검사할 수를 입력하세요\n");
     scanf("%d", &choice);
     a = choice % 2;
-    if (a == 0)
-    { //짝수
+    if (a == 0) //짝수
+    {
         printf("입력한 수는 짝수입니다.");
     }
-    if (a == 1)
-    { //홀수
+    else // a!=0 -> 홀수
+    {
         printf("입력한 수는 홀수입니다.");
     }
 }
@@ -157,6 +155,7 @@ int rootrange() //소수점 범위내 루트-edit needed
 
 int main()
 {
+    int input; //선택 입력 받기
     printf("선택\n1:계산기\n2:짝홀 판별기\n3:소수판별\n4:범위내 소수\n5:소수점 설정 루트\n:");
     scanf("%d", &input);
 
