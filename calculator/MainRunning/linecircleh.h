@@ -1,19 +1,15 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
+#pragma region
 
 /*직방, 원방 교점 개수과 교점 좌표 찾기
 직방(기울기, 한 점), 원방(중심, 반지름 길이)*/
 
-double m, liney;                //직선
-double cx, cy, cr;              //원
+extern int input;
+double m, liney;       //직선
+double cx, cy, cr;     //원
+int back, Do;          // summary and interacting
+double xa, ya, xb, yb; // summary
 
-double m, lx, ly, liney;        //직선
-double cx, cy, cr; //원
-int back, Do;                   // summary and interacting
-double xa, ya, xb, yb;       // summary
-
-int stline_gi() //기울기와 한 점
+int stline_gi() //직선의 방정식
 {
     double lx, ly;
     printf("직선의 기울기 입력: ");
@@ -24,7 +20,6 @@ int stline_gi() //기울기와 한 점
     scanf("%Lf", &ly);
     printf("-------------------------\n");
     liney = ly - (m * lx);
-
 }
 
 int circle() //원의 방정식
@@ -38,32 +33,33 @@ int circle() //원의 방정식
     scanf("%Lf", &cr);
     printf("-------------------------\n");
 }
-int calcD()
+
+int calcD() //판별식D 계산
 {
     double A, B, C, D, rootD;
     double lineycy;
     lineycy = liney - cy;
     A = m * m + 1;
     B = m * lineycy - cx; // x항 1/2 => 2B로 계산해서 x항
-    C = cx * cx + lineycy * lineycy - cr*cr;
+    C = cx * cx + lineycy * lineycy - cr * cr;
     D = 4 * B * B - 4 * A * C;
     rootD = sqrt(D);
 
-    xa=(-2*B+rootD)/(2*A);
-    xb=(-2*B-rootD)/(2*A);
-    ya=m*xa+liney;
-    yb=m*xb+liney;
+    xa = (-2 * B + rootD) / (2 * A);
+    xb = (-2 * B - rootD) / (2 * A);
+    ya = m * xa + liney;
+    yb = m * xb + liney;
 
     if (liney >= 0)
     {
         printf("\n직선의 방정식:\n y=%Lfx+%Lf\n", m, liney);
     }
-    if(liney<0)
+    if (liney < 0)
     {
         printf("\n직선의 방정식:\n y=%Lfx%Lf\n", m, liney);
     }
 
-    printf("원의 방정식:\n(x-%Lf)²+(y-%Lf)²=%Lf", cx, cy, cr*cr);
+    printf("원의 방정식:\n(x-%Lf)²+(y-%Lf)²=%Lf", cx, cy, cr * cr);
 
     printf("\n\n판별식 D=%Lf\n\n", D); // Output D
 
@@ -83,9 +79,10 @@ int calcD()
         back = 30;
     }
 }
+
 int summary() //결과 출력
 {
-    printf("교점이 %d개 입니다.\n",Do);
+    printf("교점이 %d개 입니다.\n", Do);
     if (Do == 1) //교점 1개
     {
         printf("\n교점1 (%Lf,%Lf)", xa, ya);
@@ -95,13 +92,11 @@ int summary() //결과 출력
         printf("\n교점1 (%Lf,%Lf)\n교점2 (%Lf,%Lf)\n", xa, ya, xb, yb);
     }
 }
-int main()
+int process()
 {
-
     stline_gi();
     circle();
     calcD();
     summary();
-    system("pause");
-    return 0;
 }
+#pragma endregion
