@@ -5,8 +5,13 @@
 /*직방, 원방 교점 개수과 교점 좌표 찾기
 직방(기울기, 한 점), 원방(중심, 반지름 길이)*/
 
+<<<<<<< HEAD
 double m, liney;                //직선
 double cx, cy, cr;              //원
+=======
+double m, lx, ly, liney;        //직선
+double cx, cy, cr; //원
+>>>>>>> b40999ce03e57997290d0f68e342244725303631
 int back, Do;                   // summary and interacting
 double xa, ya, xb, yb;       // summary
 
@@ -22,6 +27,17 @@ int stline_gi() //기울기와 한 점
     printf("-------------------------\n");
     liney = ly - (m * lx);
 
+<<<<<<< HEAD
+=======
+    if (liney >= 0)
+    {
+        printf("직선의 방정식:\n y=%Lfx+%Lf\n", m, liney);
+    }
+    else
+    {
+        printf("직선의 방정식:\n y=%Lfx%Lf\n", m, liney);
+    }
+>>>>>>> b40999ce03e57997290d0f68e342244725303631
 }
 
 int circle() //원의 방정식
@@ -33,7 +49,11 @@ int circle() //원의 방정식
     scanf("%Lf", &cy);
     printf("원의 반지름 길이 입력: ");
     scanf("%Lf", &cr);
+<<<<<<< HEAD
     printf("-------------------------\n");
+=======
+    printf("원의 방정식:\n(x-%Lf)²+(y-%Lf)²=%Lf\n\n", cx, cy, cr*cr);
+>>>>>>> b40999ce03e57997290d0f68e342244725303631
 }
 
 int calcD() //판별식 계산
@@ -83,6 +103,7 @@ int calcD() //판별식 계산
 }
 int summary() //결과 출력
 {
+<<<<<<< HEAD
     printf("교점이 %d개 입니다.\n",Do);
     if (Do == 1) //교점 1개
     {
@@ -91,6 +112,21 @@ int summary() //결과 출력
     if (Do == 2) //교점 2개
     {
         printf("\n교점1 (%Lf,%Lf)\n교점2 (%Lf,%Lf)\n", xa, ya, xb, yb);
+=======
+    if (Do == 0) //교점 0개
+    {
+        printf("y=%Lfx+%Lf와 (x-%Lf)²+(y-%Lf)²=%Lf 사이에는 교점이 %d개 입니다.\n", m, liney, cx, cy, cr*cr, Do);
+    }
+    if (Do == 1) //교점 1개
+    {
+        printf("y=%Lfx+%Lf와 (x-%Lf)²+(y-%Lf)²=%Lf 사이에는 교점이 %d개 입니다.\n", m, liney, cx, cy, cr*cr, Do);
+        printf("교점의 좌표:(%Lf,%Lf)", xa, yb);
+    }
+    if (Do == 2) //교점 2개
+    {
+        printf("y=%Lfx+%Lf와 (x-%Lf)²+(y-%Lf)²=%Lf 사이에는 교점이 %d개 입니다.\n", m, liney, cx, cy, cr*cr, Do);
+        printf("교점의 좌표:(%Lf,%Lf), (%Lf,%Lf)\n", xa, ya, xb, yb);
+>>>>>>> b40999ce03e57997290d0f68e342244725303631
     }
 }
 int main()
