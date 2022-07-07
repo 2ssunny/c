@@ -12,9 +12,7 @@ int prime() //소수판별
     for (int i = 1; i <= primeinput; i++) //소수 판별
     {
         sum = primeinput % a;
-    }
-
-    if (sum != 0)
+         if (sum != 0)
     { //소수 아님
         printf("입력한 수는 소수가 아닙니다.");
     }
@@ -22,6 +20,9 @@ int prime() //소수판별
     { //소수
         printf("입력한 수는 소수입니다.");
     }
+    }
+
+   
 }
 
 int main()

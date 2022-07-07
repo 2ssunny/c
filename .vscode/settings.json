@@ -3,6 +3,8 @@
   "files.associations": {
     "math.h": "c",
     "oddeven.h": "c",
-    "primerange.h": "c"
+    "primerange.h": "c",
+    "rootrange.h": "c",
+    "linecircleh.h": "c"
   }
 }
