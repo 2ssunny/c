@@ -43,21 +43,21 @@ int running()
 }
 int main()
 {
-    int input=1;
-    while(input==1)
+    int input = 1;
+    while (input == 1)
     {
-    printf("\n-----------------\n시작:1\n종료:2\n:");
-    scanf("%d", &input);
+        printf("\n-----------------\n시작:1\n종료:2\n:");
+        scanf("%d", &input);
 
-    if (input == 1)
-    {
-        running();
-    }
-    if (input == 2)
-    {
-        printf("\n종료합니다.\n\n");
-        break;
-    }
+        if (input == 1)
+        {
+            running();
+        }
+        if (input == 2)
+        {
+            printf("\n종료합니다.\n\n");
+            break;
+        }
     }
     system("pause");
     return 0;

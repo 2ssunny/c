@@ -1,4 +1,4 @@
-#pragma region 
+#pragma region
 int oddeven() //Â¦È¦ÆÇº°
 {
     int choice, a;

@@ -1,4 +1,4 @@
-#pragma region 
+#pragma region
 int arithmeticop() //사칙연산
 {
     int choice, a, b, sum;
